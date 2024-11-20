@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Survey</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="dynamic-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">SDG 16</a>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="peace.html">Peace</a></li>
+                <li><a href="justice.html">Justice</a></li>
+                <li><a href="strong_institutions.html">Strong Institutions</a></li>
+                <li><a href="survey.html">Survey</a></li>
+                <li><a href="admin.html">Admin Panel</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Survey Form -->
+    <main>
+        <section>
+            <h1>Feedback Survey</h1>
+            <p>Your feedback is important! Please share your thoughts about this webpage and its subtopics.</p>
+            <form action="/submit-survey" method="post">
+                <!-- Question 1: Multiple Choice -->
+                <div class="form-group">
+                    <label for="q1">1. How would you rate the overall design of the website?</label>
+                    <select id="q1" name="design_rating" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="excellent">Excellent</option>
+                        <option value="good">Good</option>
+                        <option value="average">Average</option>
+                        <option value="poor">Poor</option>
+                    </select>
+                </div>
+
+                <!-- Question 2: Multiple Choice -->
+                <div class="form-group">
+                    <label for="q2">2. Which subtopic did you find most informative?</label>
+                    <select id="q2" name="favorite_subtopic" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="peace">Peace</option>
+                        <option value="justice">Justice</option>
+                        <option value="strong_institutions">Strong Institutions</option>
+                    </select>
+                </div>
+
+                <!-- Question 3: Checkbox -->
+                <div class="form-group">
+                    <label>3. Which aspects of the website do you like the most? (Select all that apply)</label>
+                    <div>
+                        <input type="checkbox" id="q3a" name="website_likes" value="design">
+                        <label for="q3a">Design</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q3b" name="website_likes" value="content">
+                        <label for="q3b">Content</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q3c" name="website_likes" value="navigation">
+                        <label for="q3c">Ease of Navigation</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="q3d" name="website_likes" value="interactivity">
+                        <label for="q3d">Interactivity</label>
+                    </div>
+                </div>
+
+                <!-- Question 4: Text Input -->
+                <div class="form-group">
+                    <label for="q4">4. What improvements would you suggest for the website?</label>
+                    <textarea id="q4" name="improvements" rows="4" placeholder="Write your suggestions here..."></textarea>
+                </div>
+
+                <!-- Question 5: Likert Scale -->
+                <div class="form-group">
+                    <label>5. How strongly do you agree with the following statement: "The website provides valuable information about SDG 16."</label>
+                    <div>
+                        <input type="radio" id="q5a" name="value_rating" value="strongly_agree" required>
+                        <label for="q5a">Strongly Agree</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q5b" name="value_rating" value="agree">
+                        <label for="q5b">Agree</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q5c" name="value_rating" value="neutral">
+                        <label for="q5c">Neutral</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q5d" name="value_rating" value="disagree">
+                        <label for="q5d">Disagree</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q5e" name="value_rating" value="strongly_disagree">
+                        <label for="q5e">Strongly Disagree</label>
+                    </div>
+                </div>
+
+                <!-- Question 6: Ranking -->
+                <div class="form-group">
+                    <label for="q6">6. Rank the subtopics in order of relevance to you (1 = most relevant, 3 = least relevant):</label>
+                    <input type="number" id="q6a" name="rank_peace" placeholder="Peace" min="1" max="3" required>
+                    <input type="number" id="q6b" name="rank_justice" placeholder="Justice" min="1" max="3" required>
+                    <input type="number" id="q6c" name="rank_institutions" placeholder="Strong Institutions" min="1" max="3" required>
+                </div>
+
+                <!-- Question 7: Yes/No -->
+                <div class="form-group">
+                    <label for="q7">7. Would you recommend this website to others?</label>
+                    <select id="q7" name="recommend" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <!-- Question 8: Open-Ended -->
+                <div class="form-group">
+                    <label for="q8">8. How can we better promote the values of SDG 16?</label>
+                    <textarea id="q8" name="promotion_ideas" rows="4"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="btn-primary">Submit Feedback</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SDG 16 Initiative</p>
+    </footer>
+</body>
+</html>
